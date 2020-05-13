@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Food App</string>
+    <string name="search_your_recipes">Tìm thực đơn</string>
+    <string name="meal_categories">Loại đồ ăn</string>
+
+    <!--Bottom Navigation bar String files here... -->
+    <string name="foodHome">Home</string>
+    <string name="foodSearch">Search</string>
+    <string name="foodCart">Cart</string>
+    <string name="foodOffers">Offers</string>
+    <string name="foodAccount">Account</string>
+
+
+    <string name="loginText">Đăng Nhập</string>
+    <string name="orderLoginText">Để Order món ăn, mời bạn đăng nhập bằng FaceBook</string>
+
+    <string name="supportText">Hỗ Trợ</string>
+    <string name="faqText">Thắc Mắc</string>
+    <string name="termsConditionText">Điều khoản  và dịch vụ</string>
+
+
+    <string name="etName">Họ tên</string>
+    <string name="etEmail">Email</string>
+    <string name="etMobile">Số điện thoại</string>
+    <string name="etYourMobile">Your Mobile Number</string>
+    <string name="etPassword">Password</string>
+
+    <string name="logInText">ĐĂNG NHẬP</string>
+    <string name="signUPText">ĐĂNG KÍ</string>
+    <string name="alreadyAccText">Đã có tài khoản?</string>
+    <string name="loginTextLink">đăng nhập</string>
+    <string name="forgotText">Quên mật khẩu?</string>
+    <string name="forgotTextToolbar">Quên Mật Khẩu</string>
+    <string name="textOR">OR</string>
+    <string name="sendOTP">Mã OTP</string>
+
+    <string name="btnGoplusLogin">Đăng Nhập Với Google</string>
+    <string name="btnFBLogin">Đăng Nhập với Facebook</string>
+    <string name="facebook_app_id">593059244665781</string>
+
+</resources>

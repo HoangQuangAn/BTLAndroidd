@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relLayoutLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:visibility="visible"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/signUPCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnLoginLayout"
+                        android:text="@string/logInText"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/buttonBarButtonStyle"/>
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="3dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_below="@+id/btnLoginLayout"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="-13dp"/>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnLoginLayoutSignUp"
+                    android:text="@string/signUPText"
+                    android:textSize="16sp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:textColor="@color/colorPrimaryText"
+                    android:background="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvLoginLayoutGoogleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="3dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/googleColor"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgGoogle"
+                        android:src="@drawable/ic_google_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/imgGoogle"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnGoplusLogin"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvLoginLayoutFacebookButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fbColor"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgFB"
+                        android:src="@drawable/ic_facebook_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/imgFB"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnFBLogin"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2.5"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimaryText"/>
+
+                <TextView
+                    android:id="@+id/textOR"
+                    android:textColor="#000"
+                    android:padding="6dp"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textOR"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimaryText"/>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <EditText
+                    android:id="@+id/etLoginLayoutMobile"
+                    android:hint="@string/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_bg"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <EditText
+                    android:id="@+id/etLoginLayoutPassword"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_bg"
+                    android:hint="@string/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvLoginLayoutForgot"
+                android:textColor="@color/colorPrimary"
+                android:padding="6dp"
+                android:textSize="14sp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgotText"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="12dp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/login_vegetarian"
+        android:layout_gravity="end|top"
+        android:layout_marginBottom="-115dp"
+        android:layout_marginRight="-30dp"
+        android:layout_alignParentRight="true"
+        android:elevation="10dp"
+        android:layout_above="@+id/signUPCardView"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvLoginLayoutLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/signUPCardView"
+        app:cardBackgroundColor="@color/colorPrimary">
+
+        <TextView
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logInText"/>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

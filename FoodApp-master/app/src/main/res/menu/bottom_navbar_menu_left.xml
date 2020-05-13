@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/food_home"
+        android:icon="@drawable/ic_fast_food_home_grey"
+        android:title="@string/foodHome" />
+
+<!--    <item-->
+<!--        android:id="@+id/food_search"-->
+<!--        android:icon="@drawable/ic_plate_fork_and_knife_search_grey"-->
+<!--        android:title="@string/foodSearch" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/navigation_cart"-->
+        <!--android:icon="@drawable/ic_shopping_cart_grey"-->
+        <!--android:title="@string/foodCart" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/food_offers"-->
+        <!--android:icon="@drawable/ic_food_discount_grey"-->
+        <!--android:title="@string/foodOffers" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/navigation_profile"-->
+        <!--android:icon="@drawable/ic_food_account_grey"-->
+        <!--android:title="@string/foodAccount" />-->
+</menu>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.panky.foodapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".loginPageActivity.LoginResult"></activity>
+        <activity
+            android:name=".loginPageActivity.ForgotActivity"
+            android:parentActivityName=".View.Category.CategoryActivity" />
+        <activity
+            android:name=".loginPageActivity.SupportActivity"
+            android:parentActivityName=".View.Category.CategoryActivity" />
+        <activity
+            android:name=".loginPageActivity.FaqsActivity"
+            android:parentActivityName=".View.Category.CategoryActivity" />
+        <activity android:name=".loginPageActivity.LoginSignUpActivity" />
+        <activity
+            android:name=".loginPageActivity.TermsAndConditionActivity"
+            android:parentActivityName=".View.Category.CategoryActivity" />
+        <activity
+            android:name=".View.Category.CategoryActivity"
+            android:label="Category"
+            android:parentActivityName=".View.Home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".View.Home.HomeActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+    </application>
+
+</manifest>
