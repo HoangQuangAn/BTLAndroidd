@@ -43,9 +43,6 @@ public class CategoryFragment extends Fragment implements CategoryView, constant
     private CardView cardCategory;
 
     private AlertDialog.Builder descDialog;
-//    private LinearLayout layoutBottomSheet;
-//    private BottomSheetBehavior sheetBehavior;
-//    private Button btnBottomSheet;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -56,31 +53,6 @@ public class CategoryFragment extends Fragment implements CategoryView, constant
         initViews();
         cardCategory.setOnClickListener(this);
 
-//        sheetBehavior = BottomSheetBehavior.from(layoutBottomSheet);
-       /* sheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
-            @Override
-            public void onStateChanged(@NonNull View view, int newState) {
-                switch (newState) {
-                    case BottomSheetBehavior.STATE_HIDDEN:
-                        break;
-                    case BottomSheetBehavior.STATE_EXPANDED: {
-                        btnBottomSheet.setText("Close Sheet");
-                    }
-                    break;
-                    case BottomSheetBehavior.STATE_COLLAPSED: {
-                        btnBottomSheet.setText("Expand Sheet");
-                    }
-                    break;
-                    case BottomSheetBehavior.STATE_DRAGGING:
-                        break;
-                    case BottomSheetBehavior.STATE_SETTLING:
-                        break;
-                }
-            }
-            @Override
-            public void onSlide(@NonNull View view, float v) {
-            }
-        });*/
         return view;
     }
 
@@ -92,8 +64,7 @@ public class CategoryFragment extends Fragment implements CategoryView, constant
         pbLoadingData = view.findViewById(R.id.progressBar);
         cardCategory = view.findViewById(R.id.cardCategory);
 
-//        layoutBottomSheet = view.findViewById(R.id.bottom_sheet);
-//        btnBottomSheet = layoutBottomSheet.findViewById(R.id.btnBottomSheet);
+
     }
 
     @Override
@@ -137,21 +108,12 @@ public class CategoryFragment extends Fragment implements CategoryView, constant
             @Override
             public void onClick(View view, int position) {
                 Toast.makeText(getActivity(), "Meal :: "+meals.get(position).getStrMeal(), Toast.LENGTH_SHORT).show();
-//                toggleBottomSheet();
+
             }
         });
 
     }
 
-    /*public void toggleBottomSheet() {
-        if (sheetBehavior.getState() != BottomSheetBehavior.STATE_EXPANDED) {
-            sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-//            btnBottomSheet.setText("Close sheet");
-        } else {
-            sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-//            btnBottomSheet.setText("Expand sheet");
-        }
-    }*/
 
     @Override
     public void showLoading() {
@@ -174,7 +136,7 @@ public class CategoryFragment extends Fragment implements CategoryView, constant
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-//               dialog.show();
+
             }
         });
 

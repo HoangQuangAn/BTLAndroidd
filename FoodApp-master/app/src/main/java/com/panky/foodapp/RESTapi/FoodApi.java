@@ -9,7 +9,8 @@ import retrofit2.http.Query;
 
 public interface FoodApi {
 
-    /*This is all are request of GET */
+    /*lấy json bằng phương thức  GET */
+    // sử dụng phương thức getMeal() với Call có nghĩa là kết quả của request GET sẽ được chứa trong Meals
     @GET("search.php?f=b")
     Call<Meals> getMeal();
 

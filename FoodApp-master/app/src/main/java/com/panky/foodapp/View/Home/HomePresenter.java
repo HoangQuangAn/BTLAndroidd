@@ -15,18 +15,23 @@ public class HomePresenter {
 
     private HomeView view;
 
+    //tạo 1  contructor
     public HomePresenter(HomeView view) {
         this.view = view;
     }
 
     public void getMeals() {
 
+        //phần loading trước khi request đến server
         view.onShowLoading();
         Call<Meals> mealsCall = Utils.getApi().getMeal();
+        //Meals= List<Meal>
 
+        // chờ CallBack
         mealsCall.enqueue(new Callback<Meals>() {
             @Override
             public void onResponse(@NonNull Call<Meals> call, @NonNull Response<Meals> response) {
+
 
                 view.onHideLoading();
 
@@ -52,12 +57,10 @@ public class HomePresenter {
 
         view.onShowLoading();
         Call<Categories> categoriesCall = Utils.getApi().getCategories();
-
+        // chờ dữ liệu vêf
         categoriesCall.enqueue(new Callback<Categories>() {
             @Override
             public void onResponse(@NonNull Call<Categories> call, @NonNull Response<Categories> response) {
-
-
                 view.onHideLoading();
                 if (response.isSuccessful() && response.body() != null) {
 

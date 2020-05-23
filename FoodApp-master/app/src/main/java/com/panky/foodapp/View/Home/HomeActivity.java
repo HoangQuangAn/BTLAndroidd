@@ -102,9 +102,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         }
     }
 
-    private void toastMessage(String text) {
-        Toast.makeText(this, "You Clicked " + text + " !!", Toast.LENGTH_SHORT).show();
-    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -115,17 +113,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 onFragmentReplace(new HomeFragment(), false);
                 break;
 
-            //case R.id.food_search:
-                //onFragmentReplace(new SearchFragment(), false);
-                //break;
-
-            /*case R.id.navigation_cart:
-                onFragmentReplace(new CartFragment(), false);
-                break;*/
-
-           // case R.id.food_offers:
-               // onFragmentReplace(new OffersFragment(), false);
-               // break;
 
             case R.id.navigation_profile:
                 onFragmentReplace(new AccountFragment(), false);
@@ -136,27 +123,15 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void onBackPressed() {
-
-        Log.e("frag count :: ", ""+fragmentManager.getBackStackEntryCount()+" ;; "+ foodMainFragment);
-        Log.e("frag count Res :: ", ""+fragmentManager.getBackStackEntryCount());
-
             if (fragmentManager.getBackStackEntryCount() > 1) {
-
-                Log.e("frag count :: ", ""+fragmentManager.getBackStackEntryCount()+" ;; "+ foodMainFragment);
-                Log.e("frag count Res :: ", ""+fragmentManager.getBackStackEntryCount());
-
                 String fragName = foodMainFragment.getClass().getName().toString();
                 if (foodMainFragment instanceof HomeFragment) {
-                    Log.e("frag count :: ", ""+fragmentManager.getBackStackEntryCount()+" ;; "+ foodMainFragment);
-                    Log.e("frag count Res :: ", ""+fragmentManager.getBackStackEntryCount()+" ;; "+fragName);
-
-//                    ((AccountFragment)foodMainFragment).onBackPressed();
                     fragmentManager.popBackStack(fragName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 }else {
                     fragmentManager.popBackStack();
                 }
             } else {
-                // Otherwise, ask user if he wants to leave :)
+
                 new AlertDialog.Builder(this)
                         .setTitle("Really Exit?")
                         .setMessage("Are you sure you want to exit?")
@@ -165,7 +140,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                             public void onClick(DialogInterface arg0, int arg1) {
-                                // MainActivity.super.onBackPressed();
+
 
                                 moveTaskToBack(true);
                                 finish();

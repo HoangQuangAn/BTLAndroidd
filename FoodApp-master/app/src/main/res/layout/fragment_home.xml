@@ -127,16 +127,16 @@
             <include android:id="@+id/shimmerCategory"
                 layout="@layout/item_recycler_category_shimmer" />
 
-            <!--<TextView
-                android:padding="10dp"
-                android:gravity="center"
-                android:textColor="@color/colorWhite"
-                android:text="@string/app_name"
-                android:background="@color/colorPrimaryLight"
-                android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"/>-->
+<!--            &lt;!&ndash;<TextView-->
+<!--                android:padding="10dp"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:text="@string/app_name"-->
+<!--                android:background="@color/colorPrimaryLight"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"/>&ndash;&gt;-->
 
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>

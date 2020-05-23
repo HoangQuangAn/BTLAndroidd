@@ -19,7 +19,7 @@ public class Meals {
         this.meals = meals;
     }
 
-    /* This is Inner Class of Meals*/
+    /* đây là class bên trong của Meals*/
     public class Meal {
 
         @SerializedName("idMeal")
