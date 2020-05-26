@@ -5,9 +5,9 @@
 
     <!--Bottom Navigation bar String files here... -->
     <string name="foodHome">Home</string>
-    <string name="foodSearch">Search</string>
+    <string name="foodSearch">Love</string>
     <string name="foodCart">Cart</string>
-    <string name="foodOffers">Offers</string>
+    <string name="foodOffers">Random</string>
     <string name="foodAccount">Account</string>
 
 

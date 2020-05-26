@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
@@ -27,16 +28,27 @@ import com.panky.foodapp.FoodApp.Fragments.OffersFragment;
 import com.panky.foodapp.FoodApp.Fragments.SearchFragment;
 import com.panky.foodapp.R;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.lang.reflect.Field;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    // xay dung csdl
+    String DATABASE_NAME="monan.sqlite";
+    String DB_PATH_SUFFIX="/databases/";
+    SQLiteDatabase database=null;
     private FrameLayout food_container;
     private BottomNavigationView bottomNavigationViewLeft, bottomNavigationViewRight;
     private FloatingActionButton fabCart;
     private Fragment foodMainFragment;
     private FragmentManager fragmentManager;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +57,8 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
         initViews();
 
-
+    //hàm xử lí sao chép
+        HamXuLiSaoChep();
 
         bottomNavigationViewLeft.setOnNavigationItemSelectedListener(this);
         bottomNavigationViewRight.setOnNavigationItemSelectedListener(this);
@@ -57,6 +70,48 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         fabCart.setOnClickListener(this);
     }
 
+    private void HamXuLiSaoChep() {
+        File dbFile=getDatabasePath(DATABASE_NAME);
+        if(!dbFile.exists()){
+            try{
+                CopyDataBaseFromAsset();
+                Toast.makeText(this, "Sao Chép CSDL VÀO hệ thống thành công", Toast.LENGTH_SHORT).show();
+                Log.d("AAA", "HamXuLiSaoChep: ");
+            }
+            catch (Exception s){
+                Toast.makeText(this, s.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void CopyDataBaseFromAsset() {
+        try{
+            InputStream myInput=getAssets().open(DATABASE_NAME);
+            // trả về dường dẫn của DB
+            String outFileName=LayDuongDan();
+            File f = new File(getApplicationInfo().dataDir+DB_PATH_SUFFIX);
+            if(!f.exists()){
+                f.mkdir();
+            }
+            OutputStream myOutPut=new FileOutputStream(outFileName);
+            byte[] buffer=new byte[1024];
+            int length;
+            while ((length=myInput.read(buffer))>0){
+                myOutPut.write(buffer, 0 , length);
+            }
+            myOutPut.flush();
+            myOutPut.close();
+            myInput.close();
+
+        }catch (Exception e){
+            Log.e("LoiSaoChep", e.toString());
+
+        }
+    }
+
+    private String LayDuongDan(){
+        return getApplicationInfo().dataDir+DB_PATH_SUFFIX+DATABASE_NAME;
+    }
 
     private void updateActionBarTitle(Fragment fragment) {
         String fragClassName = fragment.getClass().getName();

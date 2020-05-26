@@ -1,6 +1,7 @@
 package com.panky.foodapp.FoodApp.Fragments;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -33,6 +34,7 @@ import java.util.TimerTask;
 
 public class HomeFragment extends Fragment implements HomeView, constantValues {
 
+
     private View view;
     private ViewPager viewPagerHeader;
     private RecyclerView categoryItemRV;
@@ -44,8 +46,10 @@ public class HomeFragment extends Fragment implements HomeView, constantValues {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
-
         initViews();
+
+        // hàm xử lí sao chép
+
         HomePresenter presenter = new HomePresenter(this);
         presenter.getMeals();
         presenter.getCategories();
@@ -58,6 +62,8 @@ public class HomeFragment extends Fragment implements HomeView, constantValues {
 
         return view;
     }
+
+
 
     private void initViews() {
         viewPagerHeader = view.findViewById(R.id.viewPagerHeader);

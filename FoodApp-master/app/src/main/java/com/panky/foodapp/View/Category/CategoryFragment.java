@@ -107,7 +107,7 @@ public class CategoryFragment extends Fragment implements CategoryView, constant
         mealByCategory.setOnItemClickListener(new RecyclerViewMealByCategory.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Toast.makeText(getActivity(), "Meal :: "+meals.get(position).getStrMeal(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Đã Thêm:: "+meals.get(position).getStrMeal()+" Vào Danh Sách Yêu Thích", Toast.LENGTH_SHORT).show();
 
             }
         });
