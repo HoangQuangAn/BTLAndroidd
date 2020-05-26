@@ -17,6 +17,6 @@ public interface FoodApi {
     @GET("categories.php")
     Call<Categories> getCategories();
 
-    @GET("filter.php")
+       @GET("filter.php")
     Call<Meals> getMealsByCategory(@Query("c") String category);
 }

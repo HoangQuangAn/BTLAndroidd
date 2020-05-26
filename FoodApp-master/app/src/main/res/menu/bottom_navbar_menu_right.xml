@@ -16,10 +16,10 @@
         <!--android:icon="@drawable/ic_shopping_cart_grey"-->
         <!--android:title="@string/foodCart" />-->
 
-<!--    <item-->
-<!--        android:id="@+id/food_offers"-->
-<!--        android:icon="@drawable/ic_food_discount_grey"-->
-<!--        android:title="@string/foodOffers" />-->
+    <item
+        android:id="@+id/food_offers"
+        android:icon="@drawable/ic_food_discount_grey"
+        android:title="@string/foodOffers" />
 
     <item
         android:id="@+id/navigation_profile"

@@ -83,7 +83,7 @@ public class HomeFragment extends Fragment implements HomeView, constantValues {
         // có thể dùng để kiểm tra meal result
         getMeals = meal;
         for (Meals.Meal mealResult : meal){
-            Log.e("meals :: ", ""+mealResult.getStrMeal());
+            Log.e("meals :: ", ""+mealResult.getStrArea());
         }
 
         ViewPagerHeaderAdapter pagerHeaderAdapter = new ViewPagerHeaderAdapter(meal, getActivity());

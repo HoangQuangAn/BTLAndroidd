@@ -112,8 +112,12 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.food_home:
                 onFragmentReplace(new HomeFragment(), false);
                 break;
-
-
+            case R.id.food_search:
+                onFragmentReplace(new SearchFragment(), false);
+                break;
+            case R.id.food_offers:
+                onFragmentReplace(new OffersFragment(), false);
+                break;
             case R.id.navigation_profile:
                 onFragmentReplace(new AccountFragment(), false);
                 break;
