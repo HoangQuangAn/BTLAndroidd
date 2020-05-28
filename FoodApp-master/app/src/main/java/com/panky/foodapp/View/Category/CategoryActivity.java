@@ -14,8 +14,11 @@ import android.widget.LinearLayout;
 import com.panky.foodapp.Adapter.ViewPagerCategoryAdapter;
 import com.panky.foodapp.Constant.constantValues;
 import com.panky.foodapp.Model.Categories;
+import com.panky.foodapp.Model.MonAn;
 import com.panky.foodapp.R;
+import com.panky.foodapp.SQLite.DBHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity implements constantValues {
@@ -23,6 +26,7 @@ public class CategoryActivity extends AppCompatActivity implements constantValue
     private Toolbar tbCategory;
     private TabLayout tblCategory;
     private ViewPager viewPagerCategory;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,5 +61,7 @@ public class CategoryActivity extends AppCompatActivity implements constantValue
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
+
+
 
 }

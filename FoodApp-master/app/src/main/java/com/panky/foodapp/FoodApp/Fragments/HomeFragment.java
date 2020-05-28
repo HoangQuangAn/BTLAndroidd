@@ -121,7 +121,7 @@ public class HomeFragment extends Fragment implements HomeView, constantValues {
         homeAdapter.setOnItemClickListener(new RecyclerViewHomeAdapter.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), category.get(position).getStrCategory(), Toast.LENGTH_SHORT).show();
 
                 Intent intentCategory = new Intent(getActivity(), CategoryActivity.class);
                 intentCategory.putExtra(EXTRA_CATEGORY, (Serializable) category);

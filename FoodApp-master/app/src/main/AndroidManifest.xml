@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".loginPageActivity.LoginResult"></activity>
+        <activity android:name=".loginPageActivity.FavouriteActivity"></activity>
+        <activity android:name=".loginPageActivity.LoginResult" />
         <activity
             android:name=".loginPageActivity.ForgotActivity"
             android:parentActivityName=".View.Category.CategoryActivity" />
